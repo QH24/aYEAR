@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Protected</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffe6f2; /* Soft pink background */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background: linear-gradient(45deg, #ffcccc, #ff99cc); /* Soft gradient background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h1 {
+        color: #ff0066; /* Pinkish heading color */
+        font-family: 'Dancing Script', cursive;
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #4d4d4d; /* Dark gray text */
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    input[type="password"] {
+        padding: 10px;
+        width: 250px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #ff0066; /* Pink button background */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    button:hover {
+        background-color: #cc0052; /* Darker shade of pink on hover */
+    }
+</style>
+<script>
+    function checkPassword() {
+        var password = document.getElementById("password").value;
+        if (password === "06062023") {
+            window.location.href = "ghar.html";
+        } else {
+            alert("Incorrect password. Please try again.");
+        }
+    }
+</script>
+</head>
+<body>
+    <div class="container">
+        <h1>HAPPY ANNIVERSARY</h1>
+        <p>This website is a PASSWORD PROTECTED just like my love for you!</p>
+        <input type="password" id="password" placeholder="Enter the magic password">
+        <button onclick="checkPassword()">Unlock</button>
+    </div>
+</body>
+</html>
